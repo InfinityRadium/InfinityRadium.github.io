@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clément Tardy — Portfolio Élève-Ingénieur ENSEEIHT & Réserviste</title>
-    <meta name="description" content="Portfolio de Clément Tardy - Élève-ingénieur en Mécanique, Fluides et Énergétique à l'ENSEEIHT (MF2E), Réserviste Opérationnel et passionné d'aviation.">
+    <meta name="description" content="Portfolio de Clément Tardy - Élève-ingénieur en Mécanique, Fluides et Énergétique à l'ENSEEIHT (MF2E), Réserviste Opérationnel, passionné d'aviation et d'endurance.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,16 +12,13 @@
                 extend: {
                     colors: {
                         navy: {
-                            800: '#0B132B',
                             900: '#070C1E',
+                            800: '#0B132B',
                             700: '#1C2541'
                         },
                         gold: {
                             500: '#C5A059',
                             400: '#D4AF37'
-                        },
-                        slate: {
-                            850: '#151F32'
                         }
                     },
                     fontFamily: {
@@ -33,7 +30,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .glass-card {
@@ -46,74 +43,83 @@
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
         }
-        .glow-effect {
-            box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.15);
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
-    <!-- NAVBAR -->
+    <!-- NAVIGATION BAR -->
     <nav class="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-slate-800 text-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="#" class="font-bold text-lg tracking-wider text-white hover:text-gold-400 transition-colors">
                 CLÉMENT TARDY
             </a>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <div class="hidden lg:flex items-center space-x-6 text-sm font-medium">
                 <a href="#about" class="hover:text-gold-400 transition-colors">À propos</a>
                 <a href="#formation" class="hover:text-gold-400 transition-colors">Formation</a>
-                <a href="#experience" class="hover:text-gold-400 transition-colors">Opérationnel & Pro</a>
+                <a href="#experience" class="hover:text-gold-400 transition-colors">Opérationnel</a>
                 <a href="#skills" class="hover:text-gold-400 transition-colors">Compétences</a>
-                <a href="#engagements" class="hover:text-gold-400 transition-colors">Engagements & Conférences</a>
-                <a href="#passions" class="hover:text-gold-400 transition-colors">Passions & Endurance</a>
+                <a href="#engagements" class="hover:text-gold-400 transition-colors">Engagements</a>
+                <a href="#voyages" class="hover:text-gold-400 transition-colors">International</a>
+                <a href="#passions" class="hover:text-gold-400 transition-colors">Passions</a>
                 <a href="#contact" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-all text-xs uppercase tracking-wider font-semibold">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="relative bg-gradient-to-b from-navy-900 via-navy-800 to-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+    <!-- HERO / HEADER SECTION -->
+    <header class="relative bg-gradient-to-b from-navy-900 via-navy-800 to-slate-900 text-white py-16 lg:py-24 overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-2 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                        Élève-Ingénieur 1A — ENSEEIHT (MF2E)
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- PHOTO DE PROFIL ET ACCUEIL -->
+                <div class="lg:col-span-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+                    
+                    <!-- Encadrement Photo de Profil -->
+                    <div class="relative group flex-shrink-0">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-gold-400 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-300"></div>
+                        <img src="profile.jpg" alt="Clément Tardy" class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover border-4 border-slate-800 shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/300x300/0b132b/ffffff?text=CT';">
                     </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                        Clément Tardy
-                    </h1>
-                    
-                    <p class="text-lg text-slate-300 font-light leading-relaxed max-w-2xl">
-                        21 ans • Originaire de Haute-Loire (Monistrol-sur-Loire) & basé à Toulouse / Lyon.<br>
-                        Futur ingénieur en <strong class="text-white font-medium">Mécanique, Fluides et Énergétique</strong>, militaire de réserve au grade de <strong class="text-white font-medium">Brigadier</strong> (Gendarmerie Nationale) et passionné d'aéronautique & sports d'endurance.
-                    </p>
 
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="mailto:tardy.clmt@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm rounded-lg shadow-lg hover:shadow-blue-500/25 transition-all">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 002 2v10a2 2 0 002 2z"></path></svg>
-                            Me contacter
-                        </a>
-                        <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-sm rounded-lg transition-all">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                            LinkedIn
-                        </a>
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                            Élève-Ingénieur 1A — ENSEEIHT (MF2E)
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                            Clément Tardy
+                        </h1>
+                        
+                        <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+                            21 ans • Originaire de Haute-Loire & basé à Toulouse / Lyon.<br>
+                            Ingénierie en <strong class="text-white font-medium">Mécanique, Fluides & Énergétique</strong>, militaire de réserve au grade de <strong class="text-white font-medium">Brigadier</strong> (Gendarmerie Nationale) et passionné d'aéronautique.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center sm:justify-start gap-3 pt-2">
+                            <a href="mailto:tardy.clmt@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs sm:text-sm rounded-lg shadow-lg transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 002 2v10a2 2 0 002 2z"></path></svg>
+                                Me contacter
+                            </a>
+                            <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-xs sm:text-sm rounded-lg transition-all">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                                LinkedIn
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- KEY METRICS CARD -->
-                <div class="glass-card p-6 rounded-2xl space-y-4">
+                <!-- CARTE DE SYNTHÈSE / REPÈRES -->
+                <div class="lg:col-span-4 glass-card p-6 rounded-2xl space-y-3">
                     <h3 class="text-xs font-semibold text-gold-400 uppercase tracking-widest border-b border-slate-800 pb-2">Repères Clefs</h3>
-                    <div class="space-y-3 text-sm">
+                    <div class="space-y-2.5 text-xs sm:text-sm">
                         <div class="flex items-center justify-between">
                             <span class="text-slate-400">École :</span>
                             <span class="font-medium text-slate-200">ENSEEIHT (Toulouse INP)</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-slate-400">Département :</span>
+                            <span class="text-slate-400">Spécialité :</span>
                             <span class="font-medium text-slate-200">MF2E</span>
                         </div>
                         <div class="flex items-center justify-between">
@@ -126,29 +132,30 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="text-slate-400">Endurance :</span>
-                            <span class="font-medium text-slate-200">Prep. Ironman • Cyclisme (10ans+)</span>
+                            <span class="font-medium text-slate-200">Prep. Ironman • Cyclisme (10ans)</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
 
-        <!-- ABOUT SECTION -->
+        <!-- PROFIL & SYNTHÈSE -->
         <section id="about" class="space-y-6">
             <div class="border-l-4 border-blue-600 pl-4">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Profil & Synthèse</h2>
                 <p class="text-sm text-slate-500">Exigence académique, rigueur militaire et passion pour la technique</p>
             </div>
             
-            <div class="light-card p-8 rounded-2xl space-y-4 text-slate-700 leading-relaxed">
+            <div class="light-card p-6 sm:p-8 rounded-2xl space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
                 <p>
-                    Actuellement étudiant en 1ère année d'école d'ingénieur à l'<strong>ENSEEIHT (Toulouse INP)</strong> au sein du département <strong>MF2E (Mécanique, Fluides, Énergétique & Procédés)</strong>, j'ai construit un parcours fondé sur la rigueur scientifique et le dépassement de soi.
+                    Actuellement étudiant en 1ère année d'école d'ingénieur à l'<strong>ENSEEIHT (Toulouse INP)</strong> au sein du département <strong>MF2E (Mécanique, Fluides, Énergétique & Procédés)</strong>, j'ai construit un parcours fondé sur la rigueur scientifique, l'esprit d'équipe et le dépassement de soi.
                 </p>
                 <p>
-                    Après trois années intensives en Classes Préparatoires aux Grandes Écoles (PCSI puis PC / PC* 5/2 au Lycée Claude-Fauriel de Saint-Étienne), j'ai développé une solide capacité d'analyse, d'adaptation sous pression et de résolution de problèmes complexes.
+                    Après trois années intensives en Classes Préparatoires aux Grandes Écoles (PCSI puis PC / PC* 5/2 au Lycée Claude-Fauriel de Saint-Étienne), j'ai développé une solide capacité d'analyse, d'adaptation sous pression et de résolution méthodique de problèmes complexes.
                 </p>
                 <p>
                     En parallèle de mes études d'ingénieur, je suis engagé comme <strong>Militaire de Réserve Opérationnelle (Brigadier - Gendarmerie Nationale)</strong> au sein du SRJ 43. Cet engagement terrain en unité d'intervention (CIRT) ainsi que sur des missions nationales (Poséidon, DHPP, DEPP) m'apporte une grande discipline, le sens du collectif, du sang-froid et la maîtrise de la gestion de crise.
@@ -156,7 +163,7 @@
             </div>
         </section>
 
-        <!-- FORMATION ACADÉMIQUE -->
+        <!-- PARCOURS ACADÉMIQUE -->
         <section id="formation" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Parcours Académique</h2>
@@ -245,21 +252,21 @@
         <!-- COMPÉTENCES TECHNIQUES -->
         <section id="skills" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Compétences Techniques & Linguistiques</h2>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Compétences Techniques & Informatiques</h2>
                 <p class="text-sm text-slate-500">Outils de l'ingénieur, simulation et capacités pratiques</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 gap-6">
                 <!-- Informatique -->
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                     </div>
-                    <h3 class="font-bold text-slate-900">Programmation & Calcul</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
-                        <li>• <strong>Python :</strong> Modélisation physique, analyse de données, scripts numériques.</li>
-                        <li>• <strong>Fortran 90 :</strong> Calcul scientifique à haute performance.</li>
-                        <li>• <strong>Git & GitHub :</strong> Versioning et travail collaboratif.</li>
+                    <h3 class="font-bold text-slate-900">Programmation & Calcul Scientifique</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• <strong>Python :</strong> Modélisation physique, analyse de données, résolution numérique.</li>
+                        <li>• <strong>Fortran 90 :</strong> Calcul scientifique à haute performance et modélisation.</li>
+                        <li>• <strong>Git & GitHub :</strong> Gestion de versions, dépôts de code et travail collaboratif.</li>
                     </ul>
                 </div>
 
@@ -269,30 +276,16 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2V4zM4 7a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7z"/></svg>
                     </div>
                     <h3 class="font-bold text-slate-900">Sciences & Mécanique Pratique</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
-                        <li>• Mécanique des Fluides, Aérodynamique & Thermodynamique.</li>
-                        <li>• Calcul de structures et dimensionnement.</li>
-                        <li>• Pratique mécanique : outillage manuel/électroportatif, montage/démontage, dépannage.</li>
-                    </ul>
-                </div>
-
-                <!-- Langues -->
-                <div class="light-card p-6 rounded-xl space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.198 16.518 5 20"/></svg>
-                    </div>
-                    <h3 class="font-bold text-slate-900">Langues</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
-                        <li>• <strong>Français :</strong> Langue maternelle.</li>
-                        <li>• <strong>Anglais :</strong> Niveau B2 Opérationnel (documentation technique & manuels de vol).</li>
-                        <li>• <strong>Espagnol :</strong> Niveau B1.</li>
-                        <li>• <strong>Chinois Mandarin :</strong> Notions (en cours d'apprentissage).</li>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>• Mécanique des Fluides, Aérodynamique & Thermodynamique des sous-systèmes.</li>
+                        <li>• Calcul de structures et dimensionnement mécanique.</li>
+                        <li>• Pratique mécanique : Outillage manuel & électroportatif, montage/démontage, dépannage et maintenance pratique.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ENGAGEMENTS & CONFÉRENCES -->
+        <!-- ENGAGEMENTS, ÉCOLOGIE & GÉOPOLITIQUE -->
         <section id="engagements" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Engagements, Écologie & Géopolitique</h2>
@@ -302,7 +295,7 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Staffeur Anti HVSS -->
                 <div class="light-card p-6 rounded-xl space-y-3">
-                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-700">Vie Éudiante & Éthique</span>
+                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-700">Vie Étudiante & Éthique</span>
                     <h3 class="text-lg font-bold text-slate-900">Staffeur Anti-HVSS — ENSEEIHT</h3>
                     <p class="text-sm text-slate-600">Engagement actif dans la prévention des Harcèlements et des Violences Sexistes et Sexuelles au sein du campus. Veille, soutien et sensibilisation lors des événements étudiants.</p>
                 </div>
@@ -330,11 +323,61 @@
             </div>
         </section>
 
-        <!-- PASSIONS & ENDURANCE -->
+        <!-- NOUVELLE SECTION : VOYAGES & OUVERTURE INTERNATIONALE -->
+        <section id="voyages" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Voyages & Ouverture Internationale</h2>
+                <p class="text-sm text-slate-500">Curiosité culturelle, adaptabilité et compétences linguistiques</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Expérience Internationale -->
+                <div class="light-card p-6 rounded-xl space-y-3 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl">
+                            🌍
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Exploration & Agilité Culturelle</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Passionné de découvertes, j'ai eu l'opportunité de voyager à travers le monde entier. Ces expériences internationales ont façonné ma capacité d'adaptation, mon ouverture d'esprit et ma facilité à interagir avec des profils multiculturels.
+                    </p>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Cette vision globale complète naturellement mon intérêt pour l'aéronautique et la défense, des secteurs interconnectés à l'échelle mondiale.
+                    </p>
+                </div>
+
+                <!-- Maîtrise des Langues -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl">
+                            🗣️
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Langues</h3>
+                    </div>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <div>
+                            <span class="font-semibold text-slate-800">Français :</span> Langue maternelle
+                        </div>
+                        <div>
+                            <span class="font-semibold text-slate-800">Anglais (B2) :</span> Niveau professionnel opérationnel (lecture de documentation technique, manuels de vol & échanges).
+                        </div>
+                        <div>
+                            <span class="font-semibold text-slate-800">Espagnol (B1) :</span> Niveau intermédiaire.
+                        </div>
+                        <div>
+                            <span class="font-semibold text-slate-800">Chinois Mandarin :</span> Notions (apprentissage en cours).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASSIONS, ENDURANCE & DISCIPLINE -->
         <section id="passions" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Passions & Dépassement de Soi</h2>
-                <p class="text-sm text-slate-500">Aviation, sports de haute endurance et pratiques artistiques</p>
+                <p class="text-sm text-slate-500">Aviation, sports de haute endurance et rigueur artistique</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
@@ -342,10 +385,10 @@
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="text-3xl">✈️</div>
                     <h3 class="text-lg font-bold text-slate-900">Aéronautique & Pilotage</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
+                    <ul class="text-sm text-slate-600 space-y-1.5">
                         <li>• <strong>BIA (Brevet d'Initiation Aéronautique) :</strong> Obtenu avec Mention.</li>
                         <li>• <strong>PPL (Private Pilot License) :</strong> Formation pratique et théorique en cours.</li>
-                        <li>• Culture aéronautique approfondie, étude des facteurs humains et des procédures de sécurité.</li>
+                        <li>• Culture aéronautique approfondie, étude des facteurs humains, de la mécanique de vol et des procédures de sécurité.</li>
                     </ul>
                 </div>
 
@@ -353,38 +396,38 @@
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="text-3xl">🚴‍♂️</div>
                     <h3 class="text-lg font-bold text-slate-900">Endurance & Discipline</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
+                    <ul class="text-sm text-slate-600 space-y-1.5">
                         <li>• <strong>Cyclisme en compétition :</strong> Plus de 10 ans de pratique sur route avant la prépa.</li>
-                        <li>• <strong>Projet Ironman :</strong> Préparation physique et mentale intensive en cours.</li>
+                        <li>• <strong>Projet Ironman :</strong> Préparation physique et mentale intensive au format longue distance.</li>
                         <li>• Capacité d'effort prolongé, gestion d'objectifs long terme et haute résilience.</li>
                     </ul>
                 </div>
 
-                <!-- Musique & Voyages -->
+                <!-- Musique & Violon -->
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="text-3xl">🎻</div>
-                    <h3 class="text-lg font-bold text-slate-900">Violon & Ouverture Internationale</h3>
-                    <ul class="text-sm text-slate-600 space-y-1">
-                        <li>• <strong>Violon :</strong> Plus de 10 ans de pratique instrumentale (rigueur, écoute et assiduité).</li>
-                        <li>• <strong>Voyages :</strong> Nombreuses immersions culturelles à travers le monde.</li>
+                    <h3 class="text-lg font-bold text-slate-900">Pratique du Violon</h3>
+                    <ul class="text-sm text-slate-600 space-y-1.5">
+                        <li>• <strong>Pratique instrumentale :</strong> Plus de 10 ans de pratique du violon.</li>
+                        <li>• Développement de l'écoute, de la rigueur personnelle, de l'assiduité et de la précision gestuelle.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT & FOOTER -->
-        <section id="contact" class="bg-gradient-to-r from-navy-900 to-slate-900 text-white p-8 sm:p-12 rounded-3xl space-y-6 text-center">
+        <section id="contact" class="bg-gradient-to-r from-navy-900 via-navy-800 to-slate-900 text-white p-8 sm:p-12 rounded-3xl space-y-6 text-center">
             <h2 class="text-3xl font-bold tracking-tight">Restons en contact</h2>
-            <p class="text-slate-300 max-w-xl mx-auto text-sm leading-relaxed">
-                Actuellement à la recherche d'opportunités, d'échanges techniques ou de projets dans le domaine des fluides, de la mécanique de flotte ou de l'aéronautique.
+            <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+                Actuellement à la recherche d'opportunités, d'échanges techniques ou de projets d'ingénierie dans le domaine des fluides, des systèmes propulsifs, de la mécanique de flotte ou de l'aéronautique.
             </p>
 
-            <div class="pt-4 flex flex-wrap justify-center items-center gap-6 text-sm">
+            <div class="pt-4 flex flex-wrap justify-center items-center gap-4 text-sm">
                 <a href="mailto:tardy.clmt@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-all shadow-lg">
                     ✉️ tardy.clmt@gmail.com
                 </a>
                 <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium rounded-xl transition-all">
-                    🔗 LinkedIn: Clément Tardy
+                    🔗 Profil LinkedIn
                 </a>
             </div>
 
