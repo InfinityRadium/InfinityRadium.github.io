@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément Tardy — Portfolio Élève-Ingénieur ENSEEIHT & Réserviste</title>
+    <meta name="description" content="Portfolio de Clément Tardy - Élève-ingénieur en Mécanique, Fluides et Énergétique à l'ENSEEIHT (MF2E), Réserviste Opérationnel et passionné d'aviation.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B132B',
+                            900: '#070C1E',
+                            700: '#1C2541'
+                        },
+                        gold: {
+                            500: '#C5A059',
+                            400: '#D4AF37'
+                        },
+                        slate: {
+                            850: '#151F32'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-slate-800 text-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg tracking-wider text-white hover:text-gold-400 transition-colors">
+                CLÉMENT TARDY
+            </a>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:text-gold-400 transition-colors">À propos</a>
+                <a href="#formation" class="hover:text-gold-400 transition-colors">Formation</a>
+                <a href="#experience" class="hover:text-gold-400 transition-colors">Opérationnel & Pro</a>
+                <a href="#skills" class="hover:text-gold-400 transition-colors">Compétences</a>
+                <a href="#engagements" class="hover:text-gold-400 transition-colors">Engagements & Conférences</a>
+                <a href="#passions" class="hover:text-gold-400 transition-colors">Passions & Endurance</a>
+                <a href="#contact" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-all text-xs uppercase tracking-wider font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-gradient-to-b from-navy-900 via-navy-800 to-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        Élève-Ingénieur 1A — ENSEEIHT (MF2E)
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Clément Tardy
+                    </h1>
+                    
+                    <p class="text-lg text-slate-300 font-light leading-relaxed max-w-2xl">
+                        21 ans • Originaire de Haute-Loire (Monistrol-sur-Loire) & basé à Toulouse / Lyon.<br>
+                        Futur ingénieur en <strong class="text-white font-medium">Mécanique, Fluides et Énergétique</strong>, militaire de réserve au grade de <strong class="text-white font-medium">Brigadier</strong> (Gendarmerie Nationale) et passionné d'aéronautique & sports d'endurance.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="mailto:tardy.clmt@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm rounded-lg shadow-lg hover:shadow-blue-500/25 transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 002 2v10a2 2 0 002 2z"></path></svg>
+                            Me contacter
+                        </a>
+                        <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-sm rounded-lg transition-all">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KEY METRICS CARD -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <h3 class="text-xs font-semibold text-gold-400 uppercase tracking-widest border-b border-slate-800 pb-2">Repères Clefs</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">École :</span>
+                            <span class="font-medium text-slate-200">ENSEEIHT (Toulouse INP)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Département :</span>
+                            <span class="font-medium text-slate-200">MF2E</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Gendarmerie :</span>
+                            <span class="font-medium text-slate-200">Brigadier (SRJ 43)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Aéronautique :</span>
+                            <span class="font-medium text-slate-200">BIA (Mention) • PPL en cours</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400">Endurance :</span>
+                            <span class="font-medium text-slate-200">Prep. Ironman • Cyclisme (10ans+)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="space-y-6">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Profil & Synthèse</h2>
+                <p class="text-sm text-slate-500">Exigence académique, rigueur militaire et passion pour la technique</p>
+            </div>
+            
+            <div class="light-card p-8 rounded-2xl space-y-4 text-slate-700 leading-relaxed">
+                <p>
+                    Actuellement étudiant en 1ère année d'école d'ingénieur à l'<strong>ENSEEIHT (Toulouse INP)</strong> au sein du département <strong>MF2E (Mécanique, Fluides, Énergétique & Procédés)</strong>, j'ai construit un parcours fondé sur la rigueur scientifique et le dépassement de soi.
+                </p>
+                <p>
+                    Après trois années intensives en Classes Préparatoires aux Grandes Écoles (PCSI puis PC / PC* 5/2 au Lycée Claude-Fauriel de Saint-Étienne), j'ai développé une solide capacité d'analyse, d'adaptation sous pression et de résolution de problèmes complexes.
+                </p>
+                <p>
+                    En parallèle de mes études d'ingénieur, je suis engagé comme <strong>Militaire de Réserve Opérationnelle (Brigadier - Gendarmerie Nationale)</strong> au sein du SRJ 43. Cet engagement terrain en unité d'intervention (CIRT) ainsi que sur des missions nationales (Poséidon, DHPP, DEPP) m'apporte une grande discipline, le sens du collectif, du sang-froid et la maîtrise de la gestion de crise.
+                </p>
+            </div>
+        </section>
+
+        <!-- FORMATION ACADÉMIQUE -->
+        <section id="formation" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Parcours Académique</h2>
+                <p class="text-sm text-slate-500">Formation scientifique et technologique de haut niveau</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- ENSEEIHT -->
+                <div class="light-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded-bl-lg">2026 - Présent</div>
+                    <h3 class="text-lg font-bold text-slate-900">Diplôme d'Ingénieur — Mécanique, Fluides, Énergétique & Procédés (MF2E)</h3>
+                    <p class="text-blue-600 font-medium text-sm">ENSEEIHT (Toulouse INP) — Toulouse, France</p>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li><strong>Aérodynamique & Mécanique des fluides :</strong> Écoulements internes/externes, turbomachines, transferts thermiques et thermodynamique appliquée.</li>
+                        <li><strong>Fiabilité & Systèmes propulsifs :</strong> Analyse des contraintes structurales, simulation numérique (CFD/FEM), diagnostic technique appliqué à l'aéronautique et à la gestion de flotte/MCO.</li>
+                    </ul>
+                </div>
+
+                <!-- CPGE -->
+                <div class="light-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-slate-200 text-slate-700 text-xs font-semibold px-4 py-1 rounded-bl-lg">2023 - 2026</div>
+                    <h3 class="text-lg font-bold text-slate-900">Classes Préparatoires aux Grandes Écoles (CPGE) — PCSI / PC (5/2)</h3>
+                    <p class="text-slate-600 font-medium text-sm">Lycée Claude-Fauriel — Saint-Étienne, France</p>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li>Secteur Scientifique Intensif : Physique, Chimie, Mathématiques & Sciences de l'Ingénieur.</li>
+                        <li>Solides bases théoriques : Mécanique du solide, cinématique, thermodynamique des cycles, équations différentielles et calcul matriciel.</li>
+                        <li>Acquisition d'une méthodologie de travail rigoureuse et capacité d'exécution sous contrainte temporelle.</li>
+                    </ul>
+                </div>
+
+                <!-- BAC -->
+                <div class="light-card p-6 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-slate-200 text-slate-700 text-xs font-semibold px-4 py-1 rounded-bl-lg">Obtenu en 2023</div>
+                    <h3 class="text-lg font-bold text-slate-900">Baccalauréat Général Scientifique — Mention</h3>
+                    <p class="text-slate-600 font-medium text-sm">Lycée Léonard de Vinci — Monistrol-sur-Loire (Haute-Loire)</p>
+                    <p class="mt-2 text-sm text-slate-600">Spécialités : Physique-Chimie, Mathématiques & Sciences de l'Ingénieur. Option Mathématiques Expertes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPÉRATIONNEL ET PRO -->
+        <section id="experience" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Expérience Opérationnelle & Pro</h2>
+                <p class="text-sm text-slate-500">Engagement militaire, missions de sécurité publique et expérience terrain</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Gendarmerie -->
+                <div class="light-card p-6 rounded-xl border-l-4 border-l-navy-800 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-navy-800 text-white mb-2">Militaire de Réserve</span>
+                            <h3 class="text-lg font-bold text-slate-900">Gendarme Réserviste — Grade de Brigadier</h3>
+                            <p class="text-sm font-medium text-slate-600">Gendarmerie Nationale — SRJ 43 (Haute-Loire)</p>
+                        </div>
+                        <span class="text-xs text-slate-400 font-mono">Depuis Juillet 2026</span>
+                    </div>
+
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><strong>Missions de renfort tactique CIRT :</strong> Déploiement au sein de la Compagnie d'Intervention de la Réserve Territoriale ; exécution d'ordres en environnement complexe et gestion du stress.</p>
+                        <p><strong>Dispositifs spécifiques :</strong> Engagement sur les missions <em>Poséidon</em> (sécurisation des frontières), <em>DHPP</em> (Dispositif Hautes Peines / Protection) et <em>DEPP</em> (Dispositif d'Éloignement et Protection Populaire).</p>
+                        <p><strong>Compétences clés :</strong> Rigueur d'exécution, respect strict des SOP (Standard Operating Procedures), esprit d'équipe et sang-froid.</p>
+                    </div>
+                </div>
+
+                <!-- Restauration -->
+                <div class="light-card p-6 rounded-xl border-l-4 border-l-slate-400 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-700 mb-2">Expérience Saisonnière</span>
+                            <h3 class="text-lg font-bold text-slate-900">Employé de Salle / Serveur en Restauration</h3>
+                            <p class="text-sm font-medium text-slate-600">Secteur de la Restauration</p>
+                        </div>
+                        <span class="text-xs text-slate-400 font-mono">Juillet 2024</span>
+                    </div>
+
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p>Service dynamique lors des coups de feu estivaux, travail d'équipe en flux tendu, relation client et sens du service.</p>
+                        <p>Gestion de l'organisation sous contrainte de temps et maintien du rythme de travail intense.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPÉTENCES TECHNIQUES -->
+        <section id="skills" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Compétences Techniques & Linguistiques</h2>
+                <p class="text-sm text-slate-500">Outils de l'ingénieur, simulation et capacités pratiques</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Informatique -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Programmation & Calcul</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• <strong>Python :</strong> Modélisation physique, analyse de données, scripts numériques.</li>
+                        <li>• <strong>Fortran 90 :</strong> Calcul scientifique à haute performance.</li>
+                        <li>• <strong>Git & GitHub :</strong> Versioning et travail collaboratif.</li>
+                    </ul>
+                </div>
+
+                <!-- Mécanique & Terrain -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2V4zM4 7a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Sciences & Mécanique Pratique</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• Mécanique des Fluides, Aérodynamique & Thermodynamique.</li>
+                        <li>• Calcul de structures et dimensionnement.</li>
+                        <li>• Pratique mécanique : outillage manuel/électroportatif, montage/démontage, dépannage.</li>
+                    </ul>
+                </div>
+
+                <!-- Langues -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.198 16.518 5 20"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Langues</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• <strong>Français :</strong> Langue maternelle.</li>
+                        <li>• <strong>Anglais :</strong> Niveau B2 Opérationnel (documentation technique & manuels de vol).</li>
+                        <li>• <strong>Espagnol :</strong> Niveau B1.</li>
+                        <li>• <strong>Chinois Mandarin :</strong> Notions (en cours d'apprentissage).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGAGEMENTS & CONFÉRENCES -->
+        <section id="engagements" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Engagements, Écologie & Géopolitique</h2>
+                <p class="text-sm text-slate-500">Implication citoyenne et ouverture sur les grands enjeux contemporains</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Staffeur Anti HVSS -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-700">Vie Éudiante & Éthique</span>
+                    <h3 class="text-lg font-bold text-slate-900">Staffeur Anti-HVSS — ENSEEIHT</h3>
+                    <p class="text-sm text-slate-600">Engagement actif dans la prévention des Harcèlements et des Violences Sexistes et Sexuelles au sein du campus. Veille, soutien et sensibilisation lors des événements étudiants.</p>
+                </div>
+
+                <!-- Conférence Géopolitique -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800">Géopolitique & Défense</span>
+                    <h3 class="text-lg font-bold text-slate-900">Conférence du Général Michel Yakovleff</h3>
+                    <p class="text-sm text-slate-600">Participation à la conférence de l'ancien vice chef d'état-major du SHAPE (OTAN), axée sur l'analyse des grands changements géopolitiques et stratégiques mondiaux.</p>
+                </div>
+
+                <!-- Fresque du Climat & Aéronautique -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800">Sensibilisation Écologique</span>
+                    <h3 class="text-lg font-bold text-slate-900">Fresques du Climat & de l'Aéronautique</h3>
+                    <p class="text-sm text-slate-600">Participation à la <strong>Fresque du Climat</strong> (compréhension systémique des enjeux du dérèglement climatique) et à la <strong>Fresque de l'Aéronautique</strong> organisée à l'<strong>ENAC</strong> (décarbonation du secteur aérien).</p>
+                </div>
+
+                <!-- Débat Spatial Supaero -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-800">Aérospatial</span>
+                    <h3 class="text-lg font-bold text-slate-900">Atelier-Débat Spatial — ISAE-Supaéro</h3>
+                    <p class="text-sm text-slate-600">Participation aux échanges réflexifs autour des nouveaux enjeux de l'exploration spatiale, de la gouvernance orbitale et du NewSpace à l'ISAE-Supaéro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASSIONS & ENDURANCE -->
+        <section id="passions" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Passions & Dépassement de Soi</h2>
+                <p class="text-sm text-slate-500">Aviation, sports de haute endurance et pratiques artistiques</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Aviation -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="text-3xl">✈️</div>
+                    <h3 class="text-lg font-bold text-slate-900">Aéronautique & Pilotage</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• <strong>BIA (Brevet d'Initiation Aéronautique) :</strong> Obtenu avec Mention.</li>
+                        <li>• <strong>PPL (Private Pilot License) :</strong> Formation pratique et théorique en cours.</li>
+                        <li>• Culture aéronautique approfondie, étude des facteurs humains et des procédures de sécurité.</li>
+                    </ul>
+                </div>
+
+                <!-- Endurance & Ironman -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="text-3xl">🚴‍♂️</div>
+                    <h3 class="text-lg font-bold text-slate-900">Endurance & Discipline</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• <strong>Cyclisme en compétition :</strong> Plus de 10 ans de pratique sur route avant la prépa.</li>
+                        <li>• <strong>Projet Ironman :</strong> Préparation physique et mentale intensive en cours.</li>
+                        <li>• Capacité d'effort prolongé, gestion d'objectifs long terme et haute résilience.</li>
+                    </ul>
+                </div>
+
+                <!-- Musique & Voyages -->
+                <div class="light-card p-6 rounded-xl space-y-3">
+                    <div class="text-3xl">🎻</div>
+                    <h3 class="text-lg font-bold text-slate-900">Violon & Ouverture Internationale</h3>
+                    <ul class="text-sm text-slate-600 space-y-1">
+                        <li>• <strong>Violon :</strong> Plus de 10 ans de pratique instrumentale (rigueur, écoute et assiduité).</li>
+                        <li>• <strong>Voyages :</strong> Nombreuses immersions culturelles à travers le monde.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & FOOTER -->
+        <section id="contact" class="bg-gradient-to-r from-navy-900 to-slate-900 text-white p-8 sm:p-12 rounded-3xl space-y-6 text-center">
+            <h2 class="text-3xl font-bold tracking-tight">Restons en contact</h2>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm leading-relaxed">
+                Actuellement à la recherche d'opportunités, d'échanges techniques ou de projets dans le domaine des fluides, de la mécanique de flotte ou de l'aéronautique.
+            </p>
+
+            <div class="pt-4 flex flex-wrap justify-center items-center gap-6 text-sm">
+                <a href="mailto:tardy.clmt@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-all shadow-lg">
+                    ✉️ tardy.clmt@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium rounded-xl transition-all">
+                    🔗 LinkedIn: Clément Tardy
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500 pt-8 border-t border-slate-800">
+                &copy; 2026 Clément Tardy — Hébergé sur GitHub Pages
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
