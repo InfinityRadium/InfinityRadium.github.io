@@ -1,3 +1,4 @@
+Voici le code HTML complet mis à jour. Il intègre un bouton de basculement de langue (FR / EN) fonctionnel dans la barre de navigation (avec traduction intégrale de l'ensemble de la page), ainsi qu'une nouvelle section dédiée aux entretiens professionnels et au mentorat (MyJobGlasses & réseau) avec Jean-Pierre Souris, Philippe Payrard et Antony Bliem.
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
@@ -43,6 +44,17 @@
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
         }
+
+        /* GESTION MULTILINGUE (FR / EN) */
+        [data-lang="en"] { display: none; }
+        html.lang-en [data-lang="fr"] { display: none !important; }
+        html.lang-en [data-lang="en"] { display: initial !important; }
+        html.lang-en div[data-lang="en"], 
+        html.lang-en p[data-lang="en"], 
+        html.lang-en section[data-lang="en"], 
+        html.lang-en ul[data-lang="en"], 
+        html.lang-en li[data-lang="en"] { display: block !important; }
+        html.lang-en flex[data-lang="en"] { display: flex !important; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
@@ -53,15 +65,38 @@
             <a href="#" class="font-bold text-lg tracking-wider text-white hover:text-gold-400 transition-colors">
                 CLÉMENT TARDY
             </a>
-            <div class="hidden lg:flex items-center space-x-6 text-sm font-medium">
-                <a href="#about" class="hover:text-gold-400 transition-colors">À propos</a>
-                <a href="#formation" class="hover:text-gold-400 transition-colors">Formation</a>
-                <a href="#experience" class="hover:text-gold-400 transition-colors">Opérationnel</a>
-                <a href="#skills" class="hover:text-gold-400 transition-colors">Compétences</a>
-                <a href="#engagements" class="hover:text-gold-400 transition-colors">Engagements</a>
-                <a href="#voyages" class="hover:text-gold-400 transition-colors">International</a>
-                <a href="#passions" class="hover:text-gold-400 transition-colors">Passions</a>
-                <a href="#contact" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-all text-xs uppercase tracking-wider font-semibold">Contact</a>
+            <div class="hidden lg:flex items-center space-x-5 text-sm font-medium">
+                <a href="#about" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">À propos</span><span data-lang="en">About</span>
+                </a>
+                <a href="#formation" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Formation</span><span data-lang="en">Education</span>
+                </a>
+                <a href="#experience" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Opérationnel</span><span data-lang="en">Experience</span>
+                </a>
+                <a href="#reseau" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Réseau</span><span data-lang="en">Network</span>
+                </a>
+                <a href="#skills" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Compétences</span><span data-lang="en">Skills</span>
+                </a>
+                <a href="#engagements" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Engagements</span><span data-lang="en">Commitments</span>
+                </a>
+                <a href="#voyages" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">International</span><span data-lang="en">International</span>
+                </a>
+                <a href="#passions" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Passions</span><span data-lang="en">Interests</span>
+                </a>
+                <a href="#contact" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-all text-xs uppercase tracking-wider font-semibold">
+                    <span data-lang="fr">Contact</span><span data-lang="en">Contact</span>
+                </a>
+                <!-- SELECTEUR DE LANGUE -->
+                <button onclick="toggleLang()" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-gold-400 font-semibold border border-slate-700 rounded-md text-xs uppercase tracking-wider transition-colors flex items-center gap-1">
+                    🌐 <span id="lang-btn-text">EN</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -85,22 +120,27 @@
                     <div class="space-y-4">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
                             <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                            Élève-Ingénieur 1A — ENSEEIHT (MF2E)
+                            <span data-lang="fr">Élève-Ingénieur 1A — ENSEEIHT (MF2E)</span>
+                            <span data-lang="en">1st Year Engineering Student — ENSEEIHT (MF2E)</span>
                         </div>
                         
                         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
                             Clément Tardy
                         </h1>
                         
-                        <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+                        <p data-lang="fr" class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
                             21 ans • Originaire de Haute-Loire & basé à Toulouse / Lyon.<br>
                             Ingénierie en <strong class="text-white font-medium">Mécanique, Fluides & Énergétique</strong>, militaire de réserve au grade de <strong class="text-white font-medium">Brigadier</strong> (Gendarmerie Nationale) et passionné d'aéronautique.
+                        </p>
+                        <p data-lang="en" class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+                            21 years old • Native of Haute-Loire & based in Toulouse / Lyon.<br>
+                            Engineering in <strong class="text-white font-medium">Mechanics, Fluid Dynamics & Energetics</strong>, Operational Military Reservist (<strong class="text-white font-medium">Brigadier</strong> - French Gendarmerie), and aviation enthusiast.
                         </p>
 
                         <div class="flex flex-wrap justify-center sm:justify-start gap-3 pt-2">
                             <a href="mailto:tardy.clmt@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs sm:text-sm rounded-lg shadow-lg transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 002 2v10a2 2 0 002 2z"></path></svg>
-                                Me contacter
+                                <span data-lang="fr">Me contacter</span><span data-lang="en">Contact me</span>
                             </a>
                             <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-xs sm:text-sm rounded-lg transition-all">
                                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -112,27 +152,29 @@
 
                 <!-- CARTE DE SYNTHÈSE / REPÈRES -->
                 <div class="lg:col-span-4 glass-card p-6 rounded-2xl space-y-3">
-                    <h3 class="text-xs font-semibold text-gold-400 uppercase tracking-widest border-b border-slate-800 pb-2">Repères Clefs</h3>
+                    <h3 class="text-xs font-semibold text-gold-400 uppercase tracking-widest border-b border-slate-800 pb-2">
+                        <span data-lang="fr">Repères Clefs</span><span data-lang="en">Key Highlights</span>
+                    </h3>
                     <div class="space-y-2.5 text-xs sm:text-sm">
                         <div class="flex items-center justify-between">
-                            <span class="text-slate-400">École :</span>
+                            <span class="text-slate-400"><span data-lang="fr">École :</span><span data-lang="en">School:</span></span>
                             <span class="font-medium text-slate-200">ENSEEIHT (Toulouse INP)</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-slate-400">Spécialité :</span>
+                            <span class="text-slate-400"><span data-lang="fr">Spécialité :</span><span data-lang="en">Major:</span></span>
                             <span class="font-medium text-slate-200">MF2E</span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-slate-400">Gendarmerie :</span>
-                            <span class="font-medium text-slate-200">Brigadier (SRJ 43)</span>
+                            <span class="text-slate-400"><span data-lang="fr">Gendarmerie :</span><span data-lang="en">Gendarmerie:</span></span>
+                            <span class="font-medium text-slate-200"><span data-lang="fr">Brigadier (SRJ 43)</span><span data-lang="en">Corporal / Brigadier (SRJ 43)</span></span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-slate-400">Aéronautique :</span>
-                            <span class="font-medium text-slate-200">BIA (Mention) • PPL en cours</span>
+                            <span class="text-slate-400"><span data-lang="fr">Aéronautique :</span><span data-lang="en">Aviation:</span></span>
+                            <span class="font-medium text-slate-200"><span data-lang="fr">BIA (Mention) • PPL en cours</span><span data-lang="en">BIA • PPL Student</span></span>
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="text-slate-400">Endurance :</span>
-                            <span class="font-medium text-slate-200">Prep. Ironman • Cyclisme (10ans)</span>
+                            <span class="text-slate-400"><span data-lang="fr">Endurance :</span><span data-lang="en">Endurance:</span></span>
+                            <span class="font-medium text-slate-200"><span data-lang="fr">Prep. Ironman • Cyclisme (10ans)</span><span data-lang="en">Ironman Prep • Cycling (10 yrs)</span></span>
                         </div>
                     </div>
                 </div>
@@ -146,13 +188,18 @@
         <!-- PROFIL & SYNTHÈSE -->
         <section id="about" class="space-y-6">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Profil & Synthèse</h2>
-                <p class="text-sm text-slate-500">Exigence académique, rigueur militaire et passion pour la technique</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Profil & Synthèse</span><span data-lang="en">Profile & Summary</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Exigence académique, rigueur militaire et passion pour la technique</span>
+                    <span data-lang="en">Academic excellence, military discipline, and passion for engineering</span>
+                </p>
             </div>
             
-            <div class="light-card p-6 sm:p-8 rounded-2xl space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
+            <div data-lang="fr" class="light-card p-6 sm:p-8 rounded-2xl space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
                 <p>
-                    Actuellement étudiant en 1ère année d'école d'ingénieur à l'<strong>ENSEEIHT (Toulouse INP)</strong> au sein du département <strong>MF2E (Mécanique, Fluides, Énergétique & Procédés)</strong>, j'ai construit un parcours fondé sur la rigueur scientifique, l'esprit d'équipe et le dépassement de soi.
+                    Actuellement étudiant en 1ère année d'école d'ingénieur à l'<strong>ENSEEIHT (Toulouse INP)</strong> au sein du département <strong>MF2E (Mécanique, Fluides, Énergétique & Environnement)</strong>, j'ai construit un parcours fondé sur la rigueur scientifique, l'esprit d'équipe et le dépassement de soi.
                 </p>
                 <p>
                     Après trois années intensives en Classes Préparatoires aux Grandes Écoles (PCSI puis PC / PC* 5/2 au Lycée Claude-Fauriel de Saint-Étienne), j'ai développé une solide capacité d'analyse, d'adaptation sous pression et de résolution méthodique de problèmes complexes.
@@ -161,45 +208,81 @@
                     En parallèle de mes études d'ingénieur, je suis engagé comme <strong>Militaire de Réserve Opérationnelle (Brigadier - Gendarmerie Nationale)</strong> au sein du SRJ 43. Cet engagement terrain en unité d'intervention (CIRT) ainsi que sur des missions nationales (Poséidon, DHPP, DEPP) m'apporte une grande discipline, le sens du collectif, du sang-froid et la maîtrise de la gestion de crise.
                 </p>
             </div>
+
+            <div data-lang="en" class="light-card p-6 sm:p-8 rounded-2xl space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
+                <p>
+                    Currently a 1st-year engineering student at <strong>ENSEEIHT (Toulouse INP)</strong> in the <strong>MF2E department (Fluid Mechanics, Energetics & Environment)</strong>, I have built a path centered on scientific rigor, teamwork, and personal achievement.
+                </p>
+                <p>
+                    Following three intensive years in French Intensive STEM Classes (CPGE PCSI / PC 5/2 at Lycée Claude-Fauriel in Saint-Étienne), I developed strong analytical skills, adaptability under pressure, and a structured approach to solving complex engineering problems.
+                </p>
+                <p>
+                    Parallel to my studies, I serve as an <strong>Operational Military Reservist (Rank of Brigadier / Corporal - French Gendarmerie Nationale)</strong> in the SRJ 43 groupement. Field duty with intervention units (CIRT) and deployment on national security ops (Poséidon, DHPP, DEPP) provide me with high discipline, composure, situational awareness, and crisis management skills.
+                </p>
+            </div>
         </section>
 
         <!-- PARCOURS ACADÉMIQUE -->
         <section id="formation" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Parcours Académique</h2>
-                <p class="text-sm text-slate-500">Formation scientifique et technologique de haut niveau</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Parcours Académique</span><span data-lang="en">Academic Background</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Formation scientifique et technologique de haut niveau</span>
+                    <span data-lang="en">High-level scientific and technological education</span>
+                </p>
             </div>
 
             <div class="space-y-6">
                 <!-- ENSEEIHT -->
                 <div class="light-card p-6 rounded-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded-bl-lg">2026 - Présent</div>
-                    <h3 class="text-lg font-bold text-slate-900">Diplôme d'Ingénieur — Mécanique, Fluides, Énergétique & Procédés (MF2E)</h3>
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-semibold px-4 py-1 rounded-bl-lg">2026 - Present</div>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Diplôme d'Ingénieur — Mécanique, Fluides & Énergétique (MF2E)</span>
+                        <span data-lang="en">Master of Engineering — Fluid Mechanics, Energetics & Environment</span>
+                    </h3>
                     <p class="text-blue-600 font-medium text-sm">ENSEEIHT (Toulouse INP) — Toulouse, France</p>
-                    <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+                    <ul data-lang="fr" class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
                         <li><strong>Aérodynamique & Mécanique des fluides :</strong> Écoulements internes/externes, turbomachines, transferts thermiques et thermodynamique appliquée.</li>
                         <li><strong>Fiabilité & Systèmes propulsifs :</strong> Analyse des contraintes structurales, simulation numérique (CFD/FEM), diagnostic technique appliqué à l'aéronautique et à la gestion de flotte/MCO.</li>
+                    </ul>
+                    <ul data-lang="en" class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li><strong>Aerodynamics & Fluid Mechanics:</strong> Internal/external flow dynamics, turbomachinery, heat transfer, and applied thermodynamics.</li>
+                        <li><strong>Reliability & Propulsion Systems:</strong> Structural stress analysis, numerical simulation (CFD/FEM), technical diagnostics applied to aerospace fleet maintenance (MRO).</li>
                     </ul>
                 </div>
 
                 <!-- CPGE -->
                 <div class="light-card p-6 rounded-xl relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-slate-200 text-slate-700 text-xs font-semibold px-4 py-1 rounded-bl-lg">2023 - 2026</div>
-                    <h3 class="text-lg font-bold text-slate-900">Classes Préparatoires aux Grandes Écoles (CPGE) — PCSI / PC (5/2)</h3>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Classes Préparatoires aux Grandes Écoles (CPGE) — PCSI / PC (5/2)</span>
+                        <span data-lang="en">Intensive Undergraduate STEM Program (CPGE) — PCSI / PC (5/2)</span>
+                    </h3>
                     <p class="text-slate-600 font-medium text-sm">Lycée Claude-Fauriel — Saint-Étienne, France</p>
-                    <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+                    <ul data-lang="fr" class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
                         <li>Secteur Scientifique Intensif : Physique, Chimie, Mathématiques & Sciences de l'Ingénieur.</li>
                         <li>Solides bases théoriques : Mécanique du solide, cinématique, thermodynamique des cycles, équations différentielles et calcul matriciel.</li>
                         <li>Acquisition d'une méthodologie de travail rigoureuse et capacité d'exécution sous contrainte temporelle.</li>
+                    </ul>
+                    <ul data-lang="en" class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li>Intensive STEM Program: Physics, Chemistry, Advanced Mathematics & Engineering Sciences.</li>
+                        <li>Solid theoretical foundations: Solid mechanics, kinematics, cycle thermodynamics, differential equations, and linear algebra.</li>
+                        <li>Rigorous work methodology and ability to deliver under high pressure and tight deadlines.</li>
                     </ul>
                 </div>
 
                 <!-- BAC -->
                 <div class="light-card p-6 rounded-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-slate-200 text-slate-700 text-xs font-semibold px-4 py-1 rounded-bl-lg">Obtenu en 2023</div>
-                    <h3 class="text-lg font-bold text-slate-900">Baccalauréat Général Scientifique — Mention</h3>
+                    <div class="absolute top-0 right-0 bg-slate-200 text-slate-700 text-xs font-semibold px-4 py-1 rounded-bl-lg">2023</div>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Baccalauréat Général Scientifique — Mention Bien</span>
+                        <span data-lang="en">French High School Diploma (Baccalauréat) — With Honors</span>
+                    </h3>
                     <p class="text-slate-600 font-medium text-sm">Lycée Léonard de Vinci — Monistrol-sur-Loire (Haute-Loire)</p>
-                    <p class="mt-2 text-sm text-slate-600">Spécialités : Physique-Chimie, Mathématiques & Sciences de l'Ingénieur. Option Mathématiques Expertes.</p>
+                    <p data-lang="fr" class="mt-2 text-sm text-slate-600">Spécialités : Physique-Chimie, Mathématiques & Sciences de l'Ingénieur. Option Mathématiques Expertes.</p>
+                    <p data-lang="en" class="mt-2 text-sm text-slate-600">Majors: Physics & Chemistry, Mathematics, Engineering Sciences. Advanced Mathematics option.</p>
                 </div>
             </div>
         </section>
@@ -207,8 +290,13 @@
         <!-- OPÉRATIONNEL ET PRO -->
         <section id="experience" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Expérience Opérationnelle & Pro</h2>
-                <p class="text-sm text-slate-500">Engagement militaire, missions de sécurité publique et expérience terrain</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Expérience Opérationnelle & Pro</span><span data-lang="en">Operational & Work Experience</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Engagement militaire, missions de sécurité publique et expérience terrain</span>
+                    <span data-lang="en">Military reserve service, public security missions, and hands-on experience</span>
+                </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
@@ -216,17 +304,28 @@
                 <div class="light-card p-6 rounded-xl border-l-4 border-l-navy-800 space-y-4">
                     <div class="flex justify-between items-start">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-navy-800 text-white mb-2">Militaire de Réserve</span>
-                            <h3 class="text-lg font-bold text-slate-900">Gendarme Réserviste — Grade de Brigadier</h3>
+                            <span data-lang="fr" class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-navy-800 text-white mb-2">Militaire de Réserve</span>
+                            <span data-lang="en" class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-navy-800 text-white mb-2">Military Reserve</span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                <span data-lang="fr">Gendarme Réserviste — Grade de Brigadier</span>
+                                <span data-lang="en">Gendarmerie Reservist — Rank of Brigadier</span>
+                            </h3>
                             <p class="text-sm font-medium text-slate-600">Gendarmerie Nationale — SRJ 43 (Haute-Loire)</p>
                         </div>
-                        <span class="text-xs text-slate-400 font-mono">Depuis Juillet 2026</span>
+                        <span class="text-xs text-slate-400 font-mono">
+                            <span data-lang="fr">Depuis 2026</span><span data-lang="en">Since 2026</span>
+                        </span>
                     </div>
 
-                    <div class="space-y-2 text-sm text-slate-600">
+                    <div data-lang="fr" class="space-y-2 text-sm text-slate-600">
                         <p><strong>Missions de renfort tactique CIRT :</strong> Déploiement au sein de la Compagnie d'Intervention de la Réserve Territoriale ; exécution d'ordres en environnement complexe et gestion du stress.</p>
-                        <p><strong>Dispositifs spécifiques :</strong> Engagement sur les missions <em>Poséidon</em> (sécurisation des frontières), <em>DHPP</em> (Dispositif Hautes Peines / Protection) et <em>DEPP</em> (Dispositif d'Éloignement et Protection Populaire).</p>
-                        <p><strong>Compétences clés :</strong> Rigueur d'exécution, respect strict des SOP (Standard Operating Procedures), esprit d'équipe et sang-froid.</p>
+                        <p><strong>Habilitations & Dispositifs :</strong> Titulaire APJA, CIAPT (PA MAS G1S, PIE, BPT). Engagement sur les missions <em>Poséidon</em>, <em>DHPP</em> et <em>DEPP</em>.</p>
+                        <p><strong>Compétences clés :</strong> Rigueur d'exécution, respect strict des SOP, esprit d'équipe et sang-froid.</p>
+                    </div>
+                    <div data-lang="en" class="space-y-2 text-sm text-slate-600">
+                        <p><strong>Tactical Reinforcement Missions (CIRT):</strong> Deployment within the Territorial Reserve Intervention Unit; executing orders in complex environments and stress management.</p>
+                        <p><strong>Qualifications & Missions:</strong> Certified Judicial Police Assistant (APJA), CIAPT firearms certified (PA MAS G1S, Taser, Baton). Deployed on <em>Poséidon</em>, <em>DHPP</em>, and <em>DEPP</em> security operations.</p>
+                        <p><strong>Key Skills:</strong> Execution rigor, strict adherence to SOPs, teamwork, and composure under stress.</p>
                     </div>
                 </div>
 
@@ -234,16 +333,76 @@
                 <div class="light-card p-6 rounded-xl border-l-4 border-l-slate-400 space-y-4">
                     <div class="flex justify-between items-start">
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-700 mb-2">Expérience Saisonnière</span>
-                            <h3 class="text-lg font-bold text-slate-900">Employé de Salle / Serveur en Restauration</h3>
+                            <span data-lang="fr" class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-700 mb-2">Expérience Saisonnière</span>
+                            <span data-lang="en" class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-700 mb-2">Seasonal Work</span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                <span data-lang="fr">Employé de Salle / Serveur</span>
+                                <span data-lang="en">Restaurant Waiter</span>
+                            </h3>
                             <p class="text-sm font-medium text-slate-600">Secteur de la Restauration</p>
                         </div>
                         <span class="text-xs text-slate-400 font-mono">Juillet 2024</span>
                     </div>
 
-                    <div class="space-y-2 text-sm text-slate-600">
+                    <div data-lang="fr" class="space-y-2 text-sm text-slate-600">
                         <p>Service dynamique lors des coups de feu estivaux, travail d'équipe en flux tendu, relation client et sens du service.</p>
                         <p>Gestion de l'organisation sous contrainte de temps et maintien du rythme de travail intense.</p>
+                    </div>
+                    <div data-lang="en" class="space-y-2 text-sm text-slate-600">
+                        <p>Fast-paced front-of-house service during peak summer periods, team collaboration under pressure, and customer relation skills.</p>
+                        <p>Time management and maintaining high output in demanding conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOUVELLE SECTION : RÉSEAU & ÉCHANGES PROFESSIONNELS -->
+        <section id="reseau" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Réseau & Échanges Professionnels</span>
+                    <span data-lang="en">Professional Network & Mentoring</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Entretiens métiers et retours d'expérience dans le secteur aéronautique</span>
+                    <span data-lang="en">Career interviews and practical insight into the aerospace industry</span>
+                </p>
+            </div>
+
+            <div class="light-card p-6 sm:p-8 rounded-2xl space-y-6">
+                <p data-lang="fr" class="text-sm sm:text-base text-slate-700 leading-relaxed">
+                    Afin d'affiner ma connaissance terrain des métiers de l'ingénierie et de la maintenance aéronautique (MCO/MRO), j'ai mené une démarche active d'échanges et d'entretiens via la plateforme <strong>MyJobGlasses</strong> ainsi qu'en réseau direct auprès de professionnels chevronnés du secteur :
+                </p>
+                <p data-lang="en" class="text-sm sm:text-base text-slate-700 leading-relaxed">
+                    To build deep insight into aerospace engineering and fleet maintenance (MRO), I actively conducted informational interviews and mentoring discussions via <strong>MyJobGlasses</strong> and personal networking with seasoned industry professionals:
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <!-- Jean-Pierre Souris -->
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="text-blue-600 font-bold text-sm">Jean-Pierre Souris</div>
+                        <p data-lang="fr" class="text-xs text-slate-600">Ancien ingénieur en mécanique chez <strong>Airbus</strong>.</p>
+                        <p data-lang="en" class="text-xs text-slate-600">Former Mechanical Engineer at <strong>Airbus</strong>.</p>
+                        <p data-lang="fr" class="text-xs text-slate-500 italic">Échanges sur la conception mécanique, les méthodes d'ingénierie et les exigences des bureaux d'études aéronautiques.</p>
+                        <p data-lang="en" class="text-xs text-slate-500 italic">Discussions on mechanical design, engineering methods, and aerospace design office requirements.</p>
+                    </div>
+
+                    <!-- Philippe Payrard -->
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="text-blue-600 font-bold text-sm">Philippe Payrard</div>
+                        <p data-lang="fr" class="text-xs text-slate-600">Ancien ingénieur chez <strong>Dassault Aviation</strong>.</p>
+                        <p data-lang="en" class="text-xs text-slate-600">Former Engineer at <strong>Dassault Aviation</strong>.</p>
+                        <p data-lang="fr" class="text-xs text-slate-500 italic">Retours d'expérience sur les systèmes aéronautiques militaires et civils, la gestion de projet et la rigueur d'ingénierie.</p>
+                        <p data-lang="en" class="text-xs text-slate-500 italic">Insights on defense and civil aircraft systems, engineering project management, and high-standard design execution.</p>
+                    </div>
+
+                    <!-- Antony Bliem -->
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="text-blue-600 font-bold text-sm">Antony Bliem</div>
+                        <p data-lang="fr" class="text-xs text-slate-600">Mécanicien entretien flotte chez <strong>Air France</strong>.</p>
+                        <p data-lang="en" class="text-xs text-slate-600">Fleet Maintenance Mechanic at <strong>Air France</strong>.</p>
+                        <p data-lang="fr" class="text-xs text-slate-500 italic">Échanges pragmatiques sur les réalités du MCO/MRO, le suivi de maintenance opérationnelle et les contraintes d'exploitation de flotte.</p>
+                        <p data-lang="en" class="text-xs text-slate-500 italic">Practical discussions on operational MRO realities, line maintenance workflows, and fleet readiness constraints.</p>
                     </div>
                 </div>
             </div>
@@ -252,8 +411,14 @@
         <!-- COMPÉTENCES TECHNIQUES -->
         <section id="skills" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Compétences Techniques & Informatiques</h2>
-                <p class="text-sm text-slate-500">Outils de l'ingénieur, simulation et capacités pratiques</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Compétences Techniques & Informatiques</span>
+                    <span data-lang="en">Technical & Engineering Skills</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Outils de l'ingénieur, simulation et capacités pratiques</span>
+                    <span data-lang="en">Engineering tools, numerical modeling, and practical mechanics</span>
+                </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
@@ -262,11 +427,19 @@
                     <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                     </div>
-                    <h3 class="font-bold text-slate-900">Programmation & Calcul Scientifique</h3>
-                    <ul class="text-sm text-slate-600 space-y-2">
+                    <h3 class="font-bold text-slate-900">
+                        <span data-lang="fr">Programmation & Calcul Scientifique</span>
+                        <span data-lang="en">Programming & Scientific Computing</span>
+                    </h3>
+                    <ul data-lang="fr" class="text-sm text-slate-600 space-y-2">
                         <li>• <strong>Python :</strong> Modélisation physique, analyse de données, résolution numérique.</li>
                         <li>• <strong>Fortran 90 :</strong> Calcul scientifique à haute performance et modélisation.</li>
                         <li>• <strong>Git & GitHub :</strong> Gestion de versions, dépôts de code et travail collaboratif.</li>
+                    </ul>
+                    <ul data-lang="en" class="text-sm text-slate-600 space-y-2">
+                        <li>• <strong>Python:</strong> Physical modeling, data analysis, numerical solvers.</li>
+                        <li>• <strong>Fortran 90:</strong> High-performance numerical computing and scientific simulation.</li>
+                        <li>• <strong>Git & GitHub:</strong> Version control, repository management, and collaborative development.</li>
                     </ul>
                 </div>
 
@@ -275,11 +448,19 @@
                     <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2V4zM4 7a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7z"/></svg>
                     </div>
-                    <h3 class="font-bold text-slate-900">Sciences & Mécanique Pratique</h3>
-                    <ul class="text-sm text-slate-600 space-y-2">
+                    <h3 class="font-bold text-slate-900">
+                        <span data-lang="fr">Sciences & Mécanique Pratique</span>
+                        <span data-lang="en">Engineering Sciences & Practical Mechanics</span>
+                    </h3>
+                    <ul data-lang="fr" class="text-sm text-slate-600 space-y-2">
                         <li>• Mécanique des Fluides, Aérodynamique & Thermodynamique des sous-systèmes.</li>
                         <li>• Calcul de structures et dimensionnement mécanique.</li>
-                        <li>• Pratique mécanique : Outillage manuel & électroportatif, montage/démontage, dépannage et maintenance pratique.</li>
+                        <li>• Pratique mécanique : Bon niveau de bricolage, outillage manuel & électroportatif, montage/démontage et maintenance.</li>
+                    </ul>
+                    <ul data-lang="en" class="text-sm text-slate-600 space-y-2">
+                        <li>• Fluid Dynamics, Aerodynamics & Subsystem Thermodynamics.</li>
+                        <li>• Structural mechanics and sizing calculation.</li>
+                        <li>• Practical mechanical aptitude: Hands-on DIY skills, power/manual tools, disassembly/assembly, and maintenance.</li>
                     </ul>
                 </div>
             </div>
@@ -288,46 +469,78 @@
         <!-- ENGAGEMENTS, ÉCOLOGIE & GÉOPOLITIQUE -->
         <section id="engagements" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Engagements, Écologie & Géopolitique</h2>
-                <p class="text-sm text-slate-500">Implication citoyenne et ouverture sur les grands enjeux contemporains</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Engagements, Écologie & Géopolitique</span>
+                    <span data-lang="en">Commitments, Ecology & Geopolitics</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Implication citoyenne et ouverture sur les grands enjeux contemporains</span>
+                    <span data-lang="en">Civic involvement and understanding of contemporary global issues</span>
+                </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Staffeur Anti HVSS -->
                 <div class="light-card p-6 rounded-xl space-y-3">
-                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-700">Vie Étudiante & Éthique</span>
-                    <h3 class="text-lg font-bold text-slate-900">Staffeur Anti-HVSS — ENSEEIHT</h3>
-                    <p class="text-sm text-slate-600">Engagement actif dans la prévention des Harcèlements et des Violences Sexistes et Sexuelles au sein du campus. Veille, soutien et sensibilisation lors des événements étudiants.</p>
+                    <span data-lang="fr" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-700">Vie Étudiante & Éthique</span>
+                    <span data-lang="en" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-100 text-rose-700">Student Life & Ethics</span>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Staffeur Anti-HVSS — ENSEEIHT</span>
+                        <span data-lang="en">Anti-Sexual Harassment & Violence Volunteer — ENSEEIHT</span>
+                    </h3>
+                    <p data-lang="fr" class="text-sm text-slate-600">Engagement actif dans la prévention des Harcèlements et des Violences Sexistes et Sexuelles au sein du campus. Veille, soutien et sensibilisation lors des événements étudiants.</p>
+                    <p data-lang="en" class="text-sm text-slate-600">Active participation in preventing sexual harassment and gender-based violence on campus. Event monitoring, peer support, and awareness initiatives.</p>
                 </div>
 
                 <!-- Conférence Géopolitique -->
                 <div class="light-card p-6 rounded-xl space-y-3">
-                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800">Géopolitique & Défense</span>
-                    <h3 class="text-lg font-bold text-slate-900">Conférence du Général Michel Yakovleff</h3>
-                    <p class="text-sm text-slate-600">Participation à la conférence de l'ancien vice chef d'état-major du SHAPE (OTAN), axée sur l'analyse des grands changements géopolitiques et stratégiques mondiaux.</p>
+                    <span data-lang="fr" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800">Géopolitique & Défense</span>
+                    <span data-lang="en" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800">Geopolitics & Defense</span>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Conférence du Général Michel Yakovleff</span>
+                        <span data-lang="en">General Michel Yakovleff Conference</span>
+                    </h3>
+                    <p data-lang="fr" class="text-sm text-slate-600">Participation à la conférence de l'ancien vice-chef d'état-major du SHAPE (OTAN), axée sur l'analyse des grands changements géopolitiques et stratégiques mondiaux.</p>
+                    <p data-lang="en" class="text-sm text-slate-600">Attended key strategic lecture by the former Vice Chief of Staff of NATO's SHAPE, addressing global geopolitical dynamics and defense challenges.</p>
                 </div>
 
                 <!-- Fresque du Climat & Aéronautique -->
                 <div class="light-card p-6 rounded-xl space-y-3">
-                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800">Sensibilisation Écologique</span>
-                    <h3 class="text-lg font-bold text-slate-900">Fresques du Climat & de l'Aéronautique</h3>
-                    <p class="text-sm text-slate-600">Participation à la <strong>Fresque du Climat</strong> (compréhension systémique des enjeux du dérèglement climatique) et à la <strong>Fresque de l'Aéronautique</strong> organisée à l'<strong>ENAC</strong> (décarbonation du secteur aérien).</p>
+                    <span data-lang="fr" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800">Sensibilisation Écologique</span>
+                    <span data-lang="en" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800">Environmental Awareness</span>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Fresques du Climat & de l'Aéronautique</span>
+                        <span data-lang="en">Climate Fresk & Aviation Fresk</span>
+                    </h3>
+                    <p data-lang="fr" class="text-sm text-slate-600">Participation à la <strong>Fresque du Climat</strong> (compréhension systémique des enjeux du dérèglement climatique) et à la <strong>Fresque de l'Aéronautique</strong> organisée à l'<strong>ENAC</strong> (décarbonation du secteur aérien).</p>
+                    <p data-lang="en" class="text-sm text-slate-600">Completed the <strong>Climate Fresk</strong> workshop (climate system dynamics) and the <strong>Aviation Fresk</strong> at <strong>ENAC</strong> (decarbonization pathways for aviation).</p>
                 </div>
 
                 <!-- Débat Spatial Supaero -->
                 <div class="light-card p-6 rounded-xl space-y-3">
-                    <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-800">Aérospatial</span>
-                    <h3 class="text-lg font-bold text-slate-900">Atelier-Débat Spatial — ISAE-Supaéro</h3>
-                    <p class="text-sm text-slate-600">Participation aux échanges réflexifs autour des nouveaux enjeux de l'exploration spatiale, de la gouvernance orbitale et du NewSpace à l'ISAE-Supaéro.</p>
+                    <span data-lang="fr" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-800">Aérospatial</span>
+                    <span data-lang="en" class="px-2.5 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-800">Aerospace</span>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Atelier-Débat Spatial — ISAE-Supaéro</span>
+                        <span data-lang="en">Space Debate Workshop — ISAE-Supaéro</span>
+                    </h3>
+                    <p data-lang="fr" class="text-sm text-slate-600">Participation aux échanges réflexifs autour des nouveaux enjeux de l'exploration spatiale, de la gouvernance orbitale et du NewSpace à l'ISAE-Supaéro.</p>
+                    <p data-lang="en" class="text-sm text-slate-600">Participated in discussions on future space exploration, orbital sustainability, and NewSpace dynamics at ISAE-Supaéro.</p>
                 </div>
             </div>
         </section>
 
-        <!-- NOUVELLE SECTION : VOYAGES & OUVERTURE INTERNATIONALE -->
+        <!-- VOYAGES & OUVERTURE INTERNATIONALE -->
         <section id="voyages" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Voyages & Ouverture Internationale</h2>
-                <p class="text-sm text-slate-500">Curiosité culturelle, adaptabilité et compétences linguistiques</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Voyages & Ouverture Internationale</span>
+                    <span data-lang="en">International Experience & Languages</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Curiosité culturelle, adaptabilité et compétences linguistiques</span>
+                    <span data-lang="en">Cultural adaptability, open mindset, and linguistic skills</span>
+                </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
@@ -337,13 +550,22 @@
                         <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl">
                             🌍
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900">Exploration & Agilité Culturelle</h3>
+                        <h3 class="text-lg font-bold text-slate-900">
+                            <span data-lang="fr">Exploration & Agilité Culturelle</span>
+                            <span data-lang="en">Global Mindset & Adaptability</span>
+                        </h3>
                     </div>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <p data-lang="fr" class="text-sm text-slate-600 leading-relaxed">
                         Passionné de découvertes, j'ai eu l'opportunité de voyager à travers le monde entier. Ces expériences internationales ont façonné ma capacité d'adaptation, mon ouverture d'esprit et ma facilité à interagir avec des profils multiculturels.
                     </p>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <p data-lang="fr" class="text-sm text-slate-600 leading-relaxed">
                         Cette vision globale complète naturellement mon intérêt pour l'aéronautique et la défense, des secteurs interconnectés à l'échelle mondiale.
+                    </p>
+                    <p data-lang="en" class="text-sm text-slate-600 leading-relaxed">
+                        Passionate about discovering new environments, international travel has strengthened my adaptability, open-mindedness, and ease in multicultural team settings.
+                    </p>
+                    <p data-lang="en" class="text-sm text-slate-600 leading-relaxed">
+                        This global perspective naturally aligns with my goal of working in globalized industries such as aerospace and defense engineering.
                     </p>
                 </div>
 
@@ -353,20 +575,27 @@
                         <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl">
                             🗣️
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900">Langues</h3>
+                        <h3 class="text-lg font-bold text-slate-900">
+                            <span data-lang="fr">Langues</span><span data-lang="en">Languages</span>
+                        </h3>
                     </div>
                     <div class="space-y-2 text-sm text-slate-600">
                         <div>
-                            <span class="font-semibold text-slate-800">Français :</span> Langue maternelle
+                            <span class="font-semibold text-slate-800"><span data-lang="fr">Français :</span><span data-lang="en">French:</span></span> 
+                            <span data-lang="fr">Langue maternelle</span><span data-lang="en">Native</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-slate-800">Anglais (B2) :</span> Niveau professionnel opérationnel (lecture de documentation technique, manuels de vol & échanges).
+                            <span class="font-semibold text-slate-800"><span data-lang="fr">Anglais (B2) :</span><span data-lang="en">English (B2):</span></span> 
+                            <span data-lang="fr">Niveau professionnel opérationnel (documentation technique, manuels de vol & échanges).</span>
+                            <span data-lang="en">Full professional proficiency (technical docs, flight manuals & technical discussion).</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-slate-800">Espagnol (B1) :</span> Niveau intermédiaire.
+                            <span class="font-semibold text-slate-800"><span data-lang="fr">Espagnol (B1) :</span><span data-lang="en">Spanish (B1):</span></span> 
+                            <span data-lang="fr">Niveau intermédiaire.</span><span data-lang="en">Intermediate level.</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-slate-800">Chinois Mandarin :</span> Notions (apprentissage en cours).
+                            <span class="font-semibold text-slate-800"><span data-lang="fr">Chinois Mandarin :</span><span data-lang="en">Mandarin Chinese:</span></span> 
+                            <span data-lang="fr">Notions (apprentissage en cours).</span><span data-lang="en">Beginner (currently learning).</span>
                         </div>
                     </div>
                 </div>
@@ -376,40 +605,69 @@
         <!-- PASSIONS, ENDURANCE & DISCIPLINE -->
         <section id="passions" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
-                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Passions & Dépassement de Soi</h2>
-                <p class="text-sm text-slate-500">Aviation, sports de haute endurance et rigueur artistique</p>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Passions & Dépassement de Soi</span>
+                    <span data-lang="en">Interests & Personal Pursuits</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Aviation, sports de haute endurance et rigueur artistique</span>
+                    <span data-lang="en">Aviation, endurance sports, and artistic discipline</span>
+                </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Aviation -->
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="text-3xl">✈️</div>
-                    <h3 class="text-lg font-bold text-slate-900">Aéronautique & Pilotage</h3>
-                    <ul class="text-sm text-slate-600 space-y-1.5">
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Aéronautique & Pilotage</span>
+                        <span data-lang="en">Aviation & Flight Training</span>
+                    </h3>
+                    <ul data-lang="fr" class="text-sm text-slate-600 space-y-1.5">
                         <li>• <strong>BIA (Brevet d'Initiation Aéronautique) :</strong> Obtenu avec Mention.</li>
                         <li>• <strong>PPL (Private Pilot License) :</strong> Formation pratique et théorique en cours.</li>
                         <li>• Culture aéronautique approfondie, étude des facteurs humains, de la mécanique de vol et des procédures de sécurité.</li>
+                    </ul>
+                    <ul data-lang="en" class="text-sm text-slate-600 space-y-1.5">
+                        <li>• <strong>BIA (Aeronautical Certificate):</strong> Earned with Honors.</li>
+                        <li>• <strong>PPL (Private Pilot License):</strong> Practical & theoretical training ongoing.</li>
+                        <li>• Flight mechanics, human factors, and aviation safety procedures.</li>
                     </ul>
                 </div>
 
                 <!-- Endurance & Ironman -->
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="text-3xl">🚴‍♂️</div>
-                    <h3 class="text-lg font-bold text-slate-900">Endurance & Discipline</h3>
-                    <ul class="text-sm text-slate-600 space-y-1.5">
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Endurance & Discipline</span>
+                        <span data-lang="en">Endurance & Resilience</span>
+                    </h3>
+                    <ul data-lang="fr" class="text-sm text-slate-600 space-y-1.5">
                         <li>• <strong>Cyclisme en compétition :</strong> Plus de 10 ans de pratique sur route avant la prépa.</li>
                         <li>• <strong>Projet Ironman :</strong> Préparation physique et mentale intensive au format longue distance.</li>
                         <li>• Capacité d'effort prolongé, gestion d'objectifs long terme et haute résilience.</li>
+                    </ul>
+                    <ul data-lang="en" class="text-sm text-slate-600 space-y-1.5">
+                        <li>• <strong>Competitive Road Cycling:</strong> 10+ years of road cycling.</li>
+                        <li>• <strong>Ironman Preparation:</strong> Long-distance triathlon physical and mental conditioning.</li>
+                        <li>• Long-term focus, goal-oriented mindset, and resilience.</li>
                     </ul>
                 </div>
 
                 <!-- Musique & Violon -->
                 <div class="light-card p-6 rounded-xl space-y-3">
                     <div class="text-3xl">🎻</div>
-                    <h3 class="text-lg font-bold text-slate-900">Pratique du Violon</h3>
-                    <ul class="text-sm text-slate-600 space-y-1.5">
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span data-lang="fr">Pratique du Violon</span>
+                        <span data-lang="en">Violin Practice</span>
+                    </h3>
+                    <ul data-lang="fr" class="text-sm text-slate-600 space-y-1.5">
                         <li>• <strong>Pratique instrumentale :</strong> Plus de 10 ans de pratique du violon.</li>
                         <li>• Développement de l'écoute, de la rigueur personnelle, de l'assiduité et de la précision gestuelle.</li>
+                    </ul>
+                    <ul data-lang="en" class="text-sm text-slate-600 space-y-1.5">
+                        <li>• <strong>Instrumental Practice:</strong> 10+ years playing the violin.</li>
+                        <li>• Cultivates focus, precision, patience, and rigorous attention to detail.</li>
                     </ul>
                 </div>
             </div>
@@ -417,9 +675,15 @@
 
         <!-- CONTACT & FOOTER -->
         <section id="contact" class="bg-gradient-to-r from-navy-900 via-navy-800 to-slate-900 text-white p-8 sm:p-12 rounded-3xl space-y-6 text-center">
-            <h2 class="text-3xl font-bold tracking-tight">Restons en contact</h2>
-            <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+            <h2 class="text-3xl font-bold tracking-tight">
+                <span data-lang="fr">Restons en contact</span>
+                <span data-lang="en">Let's Connect</span>
+            </h2>
+            <p data-lang="fr" class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
                 Actuellement à la recherche d'opportunités, d'échanges techniques ou de projets d'ingénierie dans le domaine des fluides, des systèmes propulsifs, de la mécanique de flotte ou de l'aéronautique.
+            </p>
+            <p data-lang="en" class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+                Open to technical discussions, engineering projects, and internship opportunities in fluid dynamics, propulsion systems, fleet maintenance, and aerospace engineering.
             </p>
 
             <div class="pt-4 flex flex-wrap justify-center items-center gap-4 text-sm">
@@ -427,7 +691,7 @@
                     ✉️ tardy.clmt@gmail.com
                 </a>
                 <a href="https://www.linkedin.com/in/clément-tardy-469ab8212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium rounded-xl transition-all">
-                    🔗 Profil LinkedIn
+                    🔗 <span data-lang="fr">Profil LinkedIn</span><span data-lang="en">LinkedIn Profile</span>
                 </a>
             </div>
 
@@ -438,5 +702,14 @@
 
     </main>
 
+    <!-- JS POUR LE SWITCH DE LANGUE -->
+    <script>
+        function toggleLang() {
+            const isEn = document.documentElement.classList.toggle('lang-en');
+            document.getElementById('lang-btn-text').textContent = isEn ? 'FR' : 'EN';
+            document.documentElement.lang = isEn ? 'en' : 'fr';
+        }
+    </script>
 </body>
 </html>
+
