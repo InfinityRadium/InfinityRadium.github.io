@@ -45,7 +45,7 @@
         }
 
         /* GESTION MULTILINGUE (FR / EN) */
-        [data-lang="en"] { display: none; }
+        [data-lang="en"] { display: none !important; }
         html.lang-en [data-lang="fr"] { display: none !important; }
         html.lang-en [data-lang="en"] { display: initial !important; }
         html.lang-en a[data-lang="en"] { display: inline-flex !important; }
@@ -88,6 +88,9 @@
                 </a>
                 <a href="#passions" class="hover:text-gold-400 transition-colors">
                     <span data-lang="fr">Passions</span><span data-lang="en">Interests</span>
+                </a>
+                <a href="#galerie" class="hover:text-gold-400 transition-colors">
+                    <span data-lang="fr">Galerie</span><span data-lang="en">Gallery</span>
                 </a>
                 <a href="#contact" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md transition-all text-xs uppercase tracking-wider font-semibold">
                     <span data-lang="fr">Contact</span><span data-lang="en">Contact</span>
@@ -147,6 +150,12 @@
                             <a href="CV_Clement_Tardy_EN.pdf" download data-lang="en" class="inline-flex items-center gap-2 px-4 py-2.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-xs sm:text-sm rounded-lg shadow-lg transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                                 Download Resume
+                            </a>
+
+                            <!-- BOUTON VIDÉO -->
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600 hover:bg-red-500 text-white font-medium text-xs sm:text-sm rounded-lg shadow-lg transition-all">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span data-lang="fr">Voir la vidéo</span><span data-lang="en">Watch Video</span>
                             </a>
 
                             <!-- ME CONTACTER -->
@@ -370,7 +379,7 @@
             </div>
         </section>
 
-        <!-- NOUVELLE SECTION : RÉSEAU & ÉCHANGES PROFESSIONNELS -->
+        <!-- SECTION : RÉSEAU & ÉCHANGES PROFESSIONNELS -->
         <section id="reseau" class="space-y-8">
             <div class="border-l-4 border-blue-600 pl-4">
                 <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
@@ -683,6 +692,46 @@
                         <li>• <strong>Instrumental Practice:</strong> 10+ years playing the violin.</li>
                         <li>• Cultivates focus, precision, patience, and rigorous attention to detail.</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIE PHOTOS -->
+        <section id="galerie" class="space-y-8">
+            <div class="border-l-4 border-blue-600 pl-4">
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    <span data-lang="fr">Galerie Photos</span><span data-lang="en">Photo Gallery</span>
+                </h2>
+                <p class="text-sm text-slate-500">
+                    <span data-lang="fr">Aperçu en images de mes projets, engagements et passions</span>
+                    <span data-lang="en">Visual overview of my projects, commitments, and interests</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Photo 1 -->
+                <div class="light-card p-2 rounded-2xl overflow-hidden group">
+                    <img src="photo1.jpg" alt="Photo 1" class="w-full h-64 object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0b132b/ffffff?text=Photo+1';">
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="light-card p-2 rounded-2xl overflow-hidden group">
+                    <img src="photo2.jpg" alt="Photo 2" class="w-full h-64 object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0b132b/ffffff?text=Photo+2';">
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="light-card p-2 rounded-2xl overflow-hidden group">
+                    <img src="photo3.jpg" alt="Photo 3" class="w-full h-64 object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0b132b/ffffff?text=Photo+3';">
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="light-card p-2 rounded-2xl overflow-hidden group">
+                    <img src="photo4.jpg" alt="Photo 4" class="w-full h-64 object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0b132b/ffffff?text=Photo+4';">
+                </div>
+
+                <!-- Photo 5 (Toute seule sur sa ligne) -->
+                <div class="sm:col-span-2 light-card p-2 rounded-2xl overflow-hidden group">
+                    <img src="photo5.jpg" alt="Photo 5" class="w-full h-72 sm:h-80 object-cover rounded-xl group-hover:scale-[1.01] transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/1200x500/0b132b/ffffff?text=Photo+5';">
                 </div>
             </div>
         </section>
